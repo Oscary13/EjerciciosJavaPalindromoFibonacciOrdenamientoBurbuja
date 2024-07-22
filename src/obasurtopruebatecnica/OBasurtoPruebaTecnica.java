@@ -89,18 +89,23 @@ public class OBasurtoPruebaTecnica {
         // Mostrar la serie de Fibonacci hasta el límite ingresado
         System.out.println("Serie Fibonacci hasta " + limite + ":\n\n");
         int[] arregloFibonacci = new int[limite];
-        arregloFibonacci[0] = 0;
-        arregloFibonacci[1] = 1;
+        if (limite >= 1) {
+            arregloFibonacci[0] = 1;
+            System.out.print(arregloFibonacci[0]);
+            if (limite >= 2) {
+                arregloFibonacci[1] = 1;
+                System.out.print(", ");
+                System.out.print(arregloFibonacci[1]);
 
-        System.out.print(arregloFibonacci[0]);
-        System.out.print(", ");
-        System.out.print(arregloFibonacci[1]);
+                if (limite >= 3) {
+                    for (int i = 2; i < limite; i++) {
+                        arregloFibonacci[i] = arregloFibonacci[i - 2] + arregloFibonacci[i - 1];
+                        System.out.print(", " + arregloFibonacci[i]);
+                    }
+                }
+            }
 
-        for (int i = 2; i < limite; i++) {
-            arregloFibonacci[i] = arregloFibonacci[i - 2] + arregloFibonacci[i - 1];
-            System.out.print(", " + arregloFibonacci[i]);
         }
-        System.out.println();
 
     }
 
