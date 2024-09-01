@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author oscar
+ * @author oscary
  */
 public class OBasurtoPruebaTecnica {
 
